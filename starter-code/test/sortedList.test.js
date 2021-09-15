@@ -44,88 +44,89 @@ describe('SortedList', () => {
          expect(sl.get(3)).toEqual(30);
        });
       });
-  // describe('#get(i)',  ()=> {
+  describe('#get(i)',  ()=> {
 
-  //   test('should return an OutOfBounds error if there is no element in that position', () => {
-  //      const error = new TypeError('OutOfBounds Error')
-  //      expect(()=>sl.get(20)).toThrow(error);
+    test('should return an OutOfBounds error if there is no element in that position', () => {
+       const error = new TypeError('OutOfBounds Error')
+       expect(()=>sl.get(20)).toThrow(error);
 
-  //    })
-
-
-  //   test('should return the element in that position', () => {
-  //        let item = 10;
-  //        for(let i=1; i<200; i++) {
-  //          sl.add(item*i);
-  //          expect(sl.get(i)).toBe(item*i);
-  //        }
-  //      });
-  //     });
-
-  //   describe('#max()', ()=> {
-
-  //     test('should return an EmptyList error if there is no element in the list', () => {
-  //       const error = new TypeError('EmptyList Error');
-  //       expect(()=>sl.max()).toThrow(error);
-
-  //     });
-
-  //   test('should return the max element in the list', () => {
-  //        sl.add(10);
-  //        sl.add(20);
-
-  //        expect(sl.max()).toBe(20);
-  //      });
-  //    });
-
-  //   describe('#min()', ()=> {
-
-  //   test('should return an EmptyList exception if there is no element in the list', () => {
-  //     const error = new TypeError('EmptyList Error');
-  //     expect(()=>sl.min()).toThrow(error);
-
-  //   });
-
-  //   test('should return the min element in the list', ()=> {
-  //        sl.add(10);
-  //        sl.add(20);
-
-  //        expect(sl.min()).toBe(10);
-  //      });
-  //    });
-
-  //   describe('#average()', ()=> {
-
-  //   test('should return an EmptySortedList exception if there are no elements', ()=> {
-
-  //       const error = new TypeError('EmptyList Error');
-  //       expect(()=>sl.average()).toThrow(error);
-
-  //     });
-
-  //   test('should return the average of elements in the array', ()=> {
-  //        for(let i=0; i<101; i++){
-  //          sl.add(i*2);
-  //        }
-  //        expect(sl.average()).toBe(100);
-  //      })
-  //    });
-
-  //   describe('sum()', ()=>{
-
-  //   test('should return a EmptySortedList exception if there are no elements in the list', ()=> {
-
-  //     const error = new TypeError('EmptyList Error');
-  //     expect(()=>sl.average()).toThrow(error);
-
-  //   });
+     })
 
 
-  //   test('should add(sum) all elements of the array if there are elements in the list', ()=> {
-  //        sl.add(1);
-  //        sl.add(2);
-  //        sl.add(3);
-  //        expect(sl.sum()).toBe(6);
-  //      });
-  //     });
+    test('should return the element in that position', () => {
+         let item = 10;
+         for(let i=1; i<200; i++) {
+           sl.add(item*i);
+          //  console.log(item*i);
+           expect(sl.get(i)).toBe(item*i);
+         }
+       });
+      });
+
+    describe('#max()', ()=> {
+
+      test('should return an EmptyList error if there is no element in the list', () => {
+        const error = new TypeError('EmptyList Error');
+        expect(()=>sl.max()).toThrow(error);
+
+      });
+
+    test('should return the max element in the list', () => {
+         sl.add(10);
+         sl.add(20);
+
+         expect(sl.max()).toBe(20);
+       });
+     });
+
+    describe('#min()', ()=> {
+
+    test('should return an EmptyList exception if there is no element in the list', () => {
+      const error = new TypeError('EmptyList Error');
+      expect(()=>sl.min()).toThrow(error);
+
+    });
+
+    test('should return the min element in the list', ()=> {
+         sl.add(10);
+         sl.add(20);
+
+         expect(sl.min()).toBe(10);
+       });
+     });
+
+    describe('#average()', ()=> {
+
+    test('should return an EmptySortedList exception if there are no elements', ()=> {
+
+        const error = new TypeError('EmptyList Error');
+        expect(()=>sl.average()).toThrow(error);
+
+      });
+
+    test('should return the average of elements in the array', ()=> {
+         for(let i=0; i<101; i++){
+           sl.add(i*2);
+         }
+         expect(sl.average()).toBe(100);
+       })
+     });
+
+    describe('sum()', ()=>{
+
+    test('should return a EmptySortedList exception if there are no elements in the list', ()=> {
+
+      const error = new TypeError('EmptyList Error');
+      expect(()=>sl.average()).toThrow(error);
+
+    });
+
+
+    test('should add(sum) all elements of the array if there are elements in the list', ()=> {
+         sl.add(1);
+         sl.add(2);
+         sl.add(3);
+         expect(sl.sum()).toBe(6);
+       });
+      });
 });

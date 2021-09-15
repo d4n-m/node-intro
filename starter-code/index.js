@@ -6,7 +6,6 @@ class SortedList {
 
     add(item) {  
         this.items.push(item);
-<<<<<<< HEAD
         this.items.sort(function(a, b) {
             return a-b
         });

@@ -3,8 +3,10 @@ class SortedList {
         this.items = [];
         this.length = 0;
     }
+
     add(item) {  
         this.items.push(item);
+<<<<<<< HEAD
         this.items.sort(function(a, b) {
             return a-b
         });
